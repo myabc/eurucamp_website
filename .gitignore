@@ -1,7 +1,8 @@
-_config.yml
 *.tmproj
 .DS_Store
 *.swp
 *.swo
 
-# _site should not be ignored (required for Heroku + rack-jekyll)
+# The following should not be ignored (required for Heroku + rack-jekyll)
+# _config.yml
+# _site
