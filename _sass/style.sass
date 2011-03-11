@@ -1,0 +1,50 @@
+@import "base"
+
+body
+  background-color: #c03
+  +blueprint-typography(true)
+
+header
+  +linear-gradient(color-stops(#903, #c03))
+  padding-top: 20px
+
+  h1
+    +header-text
+    +text-shadow(black, 2px, 2px, 5px)
+    text-transform: uppercase
+    font-size:      12em
+    margin-bottom:  0px
+    letter-spacing: -0.05em
+  h2
+    +text-shadow(black, 1px, 1px, 5px)
+    text-transform: uppercase
+    letter-spacing: -0.05em
+
+  text-align: center
+
+#main
+  background-color: #c03
+
+#container
+  +container
+
+.box
+  +column(8)
+
+  &.white
+    +box-shadow(black, 2px, 1px, 5px)
+    background-color: #eee
+    color:            #000
+
+    h2
+      color:          #000
+
+  &.last
+    +last
+
+#preregister
+  +column(16)
+  +last
+  background-color: #fff
+  iframe
+    margin: 10px
