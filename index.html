@@ -4,9 +4,6 @@ layout:       default
 
 <div class="box">
 
-  <h2>UPDATE: 24 March, 2011 Interim Website – we'll be announcing our first
-  sponsors shortly</h2>
-
   <h2>What's <strong>eurucamp</strong>?</h2>
 
   <p>Just like you, we noticed a huge amount of interest in <a
@@ -28,25 +25,23 @@ layout:       default
   organisers, so you'll still have a chance to meet up with those attending.</p>
 
   <h2>Contact Us</h2>
-  
+
   <p>info at eurucamp.org</p>
 
   <h2><a href="https://github.com/myabc/eurucamp_website/wiki">Our Wiki</a></h2>
 
 </div>
 
-<div id="preregister">
-  <noscript>Please switch JavaScript on to see the Pre-Registration Form</noscript>
+<div id="content">
 
-  <script type="text/javascript">var host = (("https:" == document.location.protocol) ? "https://secure." : "http://");document.write(unescape("%3Cscript src='" + host + "wufoo.com/scripts/embed/form.js' type='text/javascript'%3E%3C/script%3E"));</script>
+  {% for post in site.posts %}
 
-  <script type="text/javascript">
-  var z7x4a3 = new WufooForm();
-  z7x4a3.initialize({
-  'userName':'eurucamp',
-  'formHash':'z7x4a3',
-  'autoResize':true,
-  'height':'838'});
-  z7x4a3.display();
-  </script>
+    <h2>{{ post.title }}</h2>
+
+    <p><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d %b, %Y" }}</time></p>
+
+    <div>{{ post.content }}</div>
+
+  {% endfor %}
+
 </div>
