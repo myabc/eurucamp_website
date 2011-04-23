@@ -1,3 +1,6 @@
-require 'rack/jekyll'
+# encoding: UTF-8
 
-run Rack::Jekyll.new
+require 'bundler/setup'
+require 'middleman'
+
+run Middleman::Server

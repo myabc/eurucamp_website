@@ -2,7 +2,5 @@
 .DS_Store
 *.swp
 *.swo
-
-# The following should not be ignored (required for Heroku + rack-jekyll)
-# _config.yml
-# _site
+.sass-cache
+tmp
