@@ -13,25 +13,21 @@
 
     %link{:href => "stylesheets/style.css?v=2", :rel => "stylesheet"}/
 
-    %script{:src => "http://use.typekit.com/snt3fzj.js", :type => "text/javascript"}
+    = javascript_include_tag 'http://use.typekit.com/snt3fzj.js'
     :javascript
       try{Typekit.load();}catch(e){}
     = javascript_include_tag '/js/libs/modernizr-1.7.min.js'
+    = javascript_include_tag 'http://widgets.twimg.com/j/2/widget.js'
   %body
     #container
       %header
         #nav
           %ul
-            %li
-              %a{:href => "#conference"} conference
-            %li
-              %a{:href => "#concept"}   concept
-            %li
-              %a{:href => "#location"}  location
-            %li
-              %a{:href => "#contact"}   contact
-            %li.imp
-              %a{:href => "https://github.com/myabc/eurucamp_website/wiki"} wiki
+            %li=link_to 'sponsors',    '#sponsors'
+            %li=link_to 'conference',  '#conference'
+            %li=link_to 'people',      '#people'
+            %li=link_to 'contact',     '#contact'
+            %li.imp=link_to 'wiki',    'https://github.com/myabc/eurucamp_website/wiki'
       #main{:role => "main"}
         = yield
 
