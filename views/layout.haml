@@ -19,15 +19,17 @@
     = javascript_include_tag '/js/libs/modernizr-1.7.min.js'
     = javascript_include_tag 'http://widgets.twimg.com/j/2/widget.js'
   %body
+    %header
+      #nav
+        %h2 eurucamp
+        %ul  
+          %li=link_to 'sponsors',    '#sponsors'
+          %li=link_to 'conference',  '#conference'
+          %li=link_to 'people',      '#people'
+          %li=link_to 'contact',     '#contact'
+          %li.imp=link_to 'wiki',    'https://github.com/myabc/eurucamp_website/wiki'
     #container
-      %header
-        #nav
-          %ul
-            %li=link_to 'sponsors',    '#sponsors'
-            %li=link_to 'conference',  '#conference'
-            %li=link_to 'people',      '#people'
-            %li=link_to 'contact',     '#contact'
-            %li.imp=link_to 'wiki',    'https://github.com/myabc/eurucamp_website/wiki'
+      
       #main{:role => "main"}
         = yield
 

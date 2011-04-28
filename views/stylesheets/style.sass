@@ -13,7 +13,6 @@ body
 
 #container
   +container
-
 #main
   margin-top: 70px
   z-index: 5
@@ -23,35 +22,52 @@ section
 
   > h2
     margin-top: 2em
-    border-top: 2px dotted $anthracite
+    border-top: 1px solid $anthracite
 
 header
   position: fixed
-  +column(12)
-  +last
-  +background(linear-gradient(top, adjust-lightness($carmine, -10%), $carmine))
-  +border-bottom-radius(10px)
+  
+  
+  // +background(linear-gradient(top, adjust-lightness($carmine, -10%), $carmine))
+  // +border-bottom-radius(10px)
+  background: #ccc
   z-index:  99
   top:      0
   height:   40px
-
+  // +box-shadow(#666 0px 0px 12px)
+  width: 100%
   #nav
-    li
-      font-size:  1.2em
-      +column(2)
-    a
-      color:       white
-      text-decoration: none
-      font-weight: normal
-      font-weight: 500
-      +border-top-radius(5px)
-      padding:    3px 10px
-      &:hover,
-      &.link-active
-        color:            $carmine
-        background-color: white
-    .imp
-      //margin-left: 30px
+    margin: 0 auto
+    width: 940px
+    
+   
+    ul
+      // +horizontal-list
+      margin: 8px 0 0 0
+      padding: 0
+      li
+        font-size:  1.2em
+        // +column(1.9)
+        padding: 0px
+        display: inline
+        float: left
+        a
+          color:       $anthracite
+          text-decoration: none
+          font-weight: normal
+          font-weight: 500
+          // +border-top-radius(5px)
+          padding:    5px 20px
+          background: #eee
+          &:hover,
+          &.link-active
+
+            background-color: #ccc
+    h2
+      margin: 0
+      display: inline-block  
+      .imp
+        //margin-left: 30px
 
 #logo
   //background-color: $carmine
