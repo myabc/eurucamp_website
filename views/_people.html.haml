@@ -1,0 +1,24 @@
+%section#people
+  %h2 People
+  %div
+    .span-7.prepend-1
+      %ul
+        %li Lorem ipsum dolor sit amet
+        %li consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+        %li labore et dolore magna aliqua. Ut enim ad minim veniam,
+        %li quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+    .span-4.last
+      :javascript
+        new TWTR.Widget({
+          version:  2,
+          type:     'search',
+          rpp:      7,
+          search:   'eurucamp',
+          title:    'Live Search',
+          subject:  '#eurucamp',
+          interval: 6000,
+          width:    250,
+          height:   250,
+          theme:    eurucamp.theme,
+          features: eurucamp.twitterFeatures
+        }).render().start();
