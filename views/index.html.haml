@@ -27,32 +27,10 @@
   #logo
     = image_tag 'tools.png'
     %h1 eurucamp
-  .span-5.append-1
-    %h3 What's <strong>eurucamp</strong>?
-    %p
-      Just like you, we noticed a huge amount of interest in <a href="http://euruko2011.org/">EuRuKo</a>
-      this year and a lot of people (including the organisers of <strong>eurucamp</strong>) weren't able
-      to get tickets.
-    %p
-      So we're assembling an alternative programme for those who want to come to Berlin and hear about,
-      talk about and hack about (with) Ruby.
-    %p
-      As far as possible, we'll coordinate the social events with the EuRuKo organisers, so you'll still
-      have a chance to meet up with those attending.
-
-  .span-3.last
-    %ul.circle
-      %li.des
-        A Barcamp-style event consisting of workshops and hack-spaces.
-      %li.fle
-        Depending on interest, an alternative line up of talks.
-
-  .span-3.last
-    %ul.circle
-      %li.bui
-        BLAH
-      %li.wel
-        BLAH
+    %h2 Berlin 2011
+    %h3 Saturday 28th – Sunday 29th May
+    %p  &nbsp;
+    -# TODO: we want to use margins here!
 
 %section#sponsors
   %ul
@@ -66,5 +44,6 @@
     %li=link_to 'upstream',         'http://upstre.am/',            :class => "#{s}upstream",         :title => 'Upstream – Agile GmbH'
 
 = partial 'conference'
+-#= partial 'news'
 = partial 'people'
 = partial 'contact'

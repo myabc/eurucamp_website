@@ -1,23 +1,133 @@
 %section#conference
   %h2 Conference
-  .span-12.last
-    -#%h3.red2 conference info
-    .span-7.prepend-1
-      %p
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-        in culpa qui officia deserunt mollit anim id est laborum.
-    .span-4.last
-      :javascript
-        new TWTR.Widget({
-          version:  2,
-          type:     'profile',
-          rpp:      7,
-          interval: 6000,
-          width:    220,
-          height:   250,
-          theme:    eurucamp.theme,
-          features: eurucamp.twitterFeatures
-        }).render().setUser('eurucamp').start();
+
+  .span-10.prepend-1.append-1.last
+    %h3 What’s <strong>eurucamp</strong>?
+    %p
+      Much like you, we noticed a huge amount of interest in <a
+      href="http://euruko2011.org/">EuRuKo</a> this year and a lot of people
+      (including the organisers of <strong>eurucamp</strong>) weren't able to
+      get tickets. So we've assembled an alternative programme for those who
+      want to come to Berlin and hear about, talk about and hack about (with)
+      Ruby.
+
+    %p
+      Whoever told you you can't have both way was wrong. Our goal is to bring
+      together the best of both worlds, and as such we're combining two different
+      formats for <strong>eurucamp</strong>.
+
+  .span-5.prepend-1
+    %h3
+      Saturday 28th May –
+      %em alternative conference
+    %p
+      Saturday will feature a more traditional conference format. Talks will be
+      decided in advance. There will be <strong>9 slots of 45 minutes</strong>
+      available.
+    %table
+      %head
+        %tr
+          %td 9:00 AM
+          %td Coffee, Light Breakfast
+        %tr
+          %td 10:00 AM
+          %td Talk Slot 1
+        %tr
+          %td 10:45 AM
+          %td Talk Slot 2
+        %tr
+          %td 11:30 AM
+          %td Coffee Break
+        %tr
+          %td 11:45 AM
+          %td Talk Slot 3
+        %tr
+          %td 12:30 PM
+          %td Talk Slot 4
+        %tr
+          %td 1:15 PM
+          %td Lunch
+        %tr
+          %td 2:00 PM
+          %td Talk Slot 5
+        %tr
+          %td 2:45 PM
+          %td Talk Slot 6
+        %tr
+          %td 3:30 PM
+          %td Coffee Break
+        %tr
+          %td 3:45 PM
+          %td Talk Slot 7
+        %tr
+          %td 4:30 PM
+          %td Talk Slot 8
+        %tr
+          %td 5:15 PM
+          %td Beer Break
+        %tr
+          %td 5:30 PM
+          %td Keynote Slot
+        %tr
+          %td 6:15 PM
+          %td
+            %em Schluss
+    %p
+      %em Call for proposals information will be added shortly.
+
+  .span-5
+
+    %h3
+      Sunday 29th May –
+      %em 100% open space
+    = image_tag 'open-space.png'
+    %p
+      On Sunday everything will be decided on the day itself. In principle we
+      suggest lightning talks of about 15 minutes, plus workshops.
+    %p
+      Reach for the <em>alka-seltzer</em>. Provided you can get yourself along
+      for 10am, you'll have a chance to shape the day yourself and bring your
+      own ideas.
+
+    %table
+      %head
+        %tr
+          %td 9:30 AM
+          %td Coffee, Light Breakfast
+        %tr
+          %td 10:00 AM
+          %td Workshop, Lightning Talks 1
+        %tr
+          %td 11:30 AM
+          %td Coffee Break
+        %tr
+          %td 11:45 AM
+          %td Workshop, Lightning Talks 2
+        %tr
+          %td 1:15 PM
+          %td Lunch
+        %tr
+          %td 2:00 PM
+          %td Workshop, Lightning Talks 3
+        %tr
+          %td 3:30 PM
+          %td Coffee Break
+        %tr
+          %td 3:45 PM
+          %td Workshop, Lightning Talks 4
+        %tr
+          %td 5:15 PM
+          %td Beer Break
+        %tr
+          %td 5:30 PM
+          %td Workshop, Lightning Talks 5
+        %tr
+          %td 6:15 PM
+          %td
+            %em Schluss
+
+    %p
+      = link_to 'Format Ideas', 'https://github.com/myabc/eurucamp_website/wiki/Format-Ideas'
+      = link_to 'Talk / Workshop Ideas', 'https://github.com/myabc/eurucamp_website/wiki/Talk-ideas'
+
+  .span-3

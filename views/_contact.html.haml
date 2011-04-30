@@ -1,16 +1,22 @@
 %section#contact
-  %h2 Contact
+  %h2 Contact & Terms
   .span-6.prepend-1
     %p
-      Please feel free to contact us. We are looking forward to it.
-      %br/
-    #summary
-      %ul
-    #summary2
-      %ul
-  .span-4.prepend-2
-    %img.mb25{:alt => "contact_person", :height => "40", :src => "http://placehold.it/240x40", :width => "240"}/
-    .vcard
-      .email
-        %span email
-        info@eurucamp.org
+      Please get in touch if you have ideas or questions. We really enjoy
+      hearing from you. This is a not-for-profit, non-commercial event and we
+      endeavour to be as democratic as possible in our decision making.
+      -#%img.mb25{:alt => "contact_person", :height => "40", :src => "http://placehold.it/240x40", :width => "240"}/
+      .vcard
+        .email
+          %span email:
+          info@eurucamp.org
+
+    %ul
+      %li=link_to 'Imprint / Impressum', '/imprint'
+
+    %p Further acknowledgments:
+    %ul
+      %li Nico Hagenburger for the awesome pure CSS "Fork me" ribbon.
+      %li Caleb T. (I make web things: http://imakewebthings.com/) for jQuery Waypoints.
+      %li Heroku for hosting our website.
+      %li GitHub for hosting our code.
