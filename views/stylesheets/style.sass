@@ -8,8 +8,6 @@ body
   background: white
   +blueprint-typography(true)
 
-//h1, h2, h3
-  font-family: "ff-cocon-web-pro-1","ff-cocon-web-pro-2"
 
 #container
   +container
@@ -26,10 +24,6 @@ section
 
 header
   position: fixed
-
-
-  // +background(linear-gradient(top, adjust-lightness($carmine, -10%), $carmine))
-  // +border-bottom-radius(10px)
   background: #ccc
   z-index:  99
   top:      0
@@ -66,11 +60,10 @@ header
     h2
       margin: 0
       display: inline-block
-      .imp
-        //margin-left: 30px
+      font-weight: bold
+      font-style:  italic
 
 #logo
-  //background-color: $carmine
   +prepend(1)
   h1
     color:       $carmine
@@ -78,7 +71,6 @@ header
     font-weight: bold
     font-style:  italic
     +single-text-shadow($light-pink, 2px, 2px, 5px)
-    //letter-spacing: -0.05em
 
 h2
   text-transform: lowercase
