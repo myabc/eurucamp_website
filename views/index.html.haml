@@ -25,23 +25,15 @@
 
 %section#splash
   #logo
-    = image_tag 'tools.png'
-    %h1 eurucamp
-    %h2 Berlin 2011
-    %h3 Saturday 28th – Sunday 29th May
-    %p  &nbsp;
-    -# TODO: we want to use margins here!
-
-%section#sponsors
-  %ul
-    - s = 'sponsor-'
-    %li=link_to 'co.up',            'http://co-up.de/',             :class => "#{s}coup",             :title => 'Berlin co-working space'
-    %li=link_to 'dnsimple',         'https://dnsimple.com/',        :class => "#{s}dnsimple",         :title => 'Simple Hosted DNS and Domain Management'
-    %li=link_to 'edenspiekermann',  'http://edenspiekermann.com/',  :class => "#{s}edenspiekermann",  :title => 'Leading design and communication agency'
-    %li=link_to 'railslove',        'http://railslove.com/',        :class => "#{s}railslove",        :title => 'Railslove -  - we love building web applications!'
-    %li=link_to 'rougecardinal',    'http://rougecardinal.fr/',     :class => "#{s}rougecardinal",    :title => 'Paris-based web development agency'
-    %li=link_to 'tigrish',          'http://tigrish.com/',          :class => "#{s}tigrish",          :title => 'Paris-based web and mobile agency'
-    %li=link_to 'upstream',         'http://upstre.am/',            :class => "#{s}upstream",         :title => 'Upstream – Agile GmbH'
+    %h2
+      Berlin 2011
+      %br
+      Saturday 28th – Sunday 29th May
+    / = image_tag 'pickaxe.jpg'
+    %h1
+      euru
+      %br
+      camp
 
 = partial 'conference'
 -#= partial 'news'

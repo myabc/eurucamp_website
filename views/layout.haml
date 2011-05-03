@@ -23,7 +23,6 @@
       #nav
         %h2 eurucamp
         %ul
-          %li=link_to 'sponsors',    '#sponsors'
           %li=link_to 'conference',  '#conference'
           %li=link_to 'people',      '#people'
           %li=link_to 'contact',     '#contact'
@@ -32,7 +31,19 @@
 
       #main{:role => "main"}
         = yield
-
+    
+    %section#sponsors
+      %h4 sponsors
+      %ul
+        - s = 'sponsor-'
+        %li=link_to 'co.up',            'http://co-up.de/',             :class => "#{s}coup",             :title => 'Berlin co-working space'
+        %li=link_to 'dnsimple',         'https://dnsimple.com/',        :class => "#{s}dnsimple",         :title => 'Simple Hosted DNS and Domain Management'
+        %li=link_to 'edenspiekermann',  'http://edenspiekermann.com/',  :class => "#{s}edenspiekermann",  :title => 'Leading design and communication agency'
+        %li=link_to 'railslove',        'http://railslove.com/',        :class => "#{s}railslove",        :title => 'Railslove -  - we love building web applications!'
+        %li=link_to 'rougecardinal',    'http://rougecardinal.fr/',     :class => "#{s}rougecardinal",    :title => 'Paris-based web development agency'
+        %li=link_to 'tigrish',          'http://tigrish.com/',          :class => "#{s}tigrish",          :title => 'Paris-based web and mobile agency'
+        %li=link_to 'upstream',         'http://upstre.am/',            :class => "#{s}upstream",         :title => 'Upstream – Agile GmbH'
+    
     %footer
       &nbsp;
     %a#github{:href=> "https://github.com/myabc/eurucamp_website"}

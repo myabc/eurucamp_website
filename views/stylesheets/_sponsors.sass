@@ -4,12 +4,22 @@ $sponsor-sprite-dimensions: true
 +all-sponsor-sprites
 
 #sponsors
+  position: absolute
+  right: 10px
+  top: 500px
+  text-align: center
   ul
-    +inline-block-list-container
+    
     > li
-      +inline-block-list-item
+      
       // FIXME: this does not correspond to grid
-      margin-right: 10px
+      
+      margin-bottom: 10px
       a
         display: block
         text-indent: -9999px
+        opacity: 0.3
+        +transition(opacity, 1s)
+        &:hover
+          opacity: 1.0
+          +transition(opacity, 1s)
