@@ -24,7 +24,7 @@
   }
 
 %section#splash
-  #logo
+  #logo.span-13.append-1.prepend-1
     %h2
       Berlin 2011
       %br
@@ -34,6 +34,37 @@
       euru
       %br
       camp
+  .span-7.prepend-1.append-1
+    %h3 What’s <strong>eurucamp</strong>?
+    %p
+      Much like you, we noticed a huge amount of interest in <a
+      href="http://euruko2011.org/">EuRuKo</a> this year and a lot of people
+      (including the organisers of <strong>eurucamp</strong>) weren't able to
+      get tickets. So we've assembled an alternative programme for those who
+      want to come to Berlin and hear about, talk about and hack about (with)
+      Ruby.
+
+    %p
+      Whoever told you you can't have both way was wrong. Our goal is to bring
+      together the best of both worlds, and as such we're combining two different
+      formats for <strong>eurucamp</strong>.
+  .span-5.last
+    %h3 And what they're saying…
+    :javascript
+      new TWTR.Widget({
+        version:  2,
+        type:     'search',
+        rpp:      7,
+        search:   'eurucamp',
+        title:    'Live Search',
+        subject:  '#eurucamp',
+        interval: 6000,
+        width:    300,
+        height:   250,
+        theme:    eurucamp.theme,
+        features: eurucamp.twitterFeatures
+      }).render().start();
+  
 
 = partial 'conference'
 -#= partial 'news'

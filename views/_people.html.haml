@@ -1,7 +1,7 @@
 %section#people
   %h2 People
   %div
-    .span-3.prepend-1
+    .span-6.prepend-1
       %h3 Who's organising
       %ul
         %li Alex Coles
@@ -14,24 +14,9 @@
         %li Dirk Schmid
         %li Guillermo Tirelli
 
-    .span-4
+    .span-7.append-1.last
       %h3 Who's coming
       %p
         %em Public attendee list will be added shortly…
 
-    .span-4.last
-      %h3 And what they're saying…
-      :javascript
-        new TWTR.Widget({
-          version:  2,
-          type:     'search',
-          rpp:      7,
-          search:   'eurucamp',
-          title:    'Live Search',
-          subject:  '#eurucamp',
-          interval: 6000,
-          width:    250,
-          height:   250,
-          theme:    eurucamp.theme,
-          features: eurucamp.twitterFeatures
-        }).render().start();
+    
