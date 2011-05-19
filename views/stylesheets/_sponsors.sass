@@ -1,9 +1,21 @@
-@import "sponsor/*.png"
+@import "screwdriver-sponsor/*.png"
+@import "powertool-sponsor/*.png"
 
-$sponsor-sprite-dimensions: true
-+all-sponsor-sprites
+$screwdriver-sponsor-sprite-dimensions: true
+$powertool-sponsor-sprite-dimensions:   true
+
++all-screwdriver-sponsor-sprites
++all-powertool-sponsor-sprites
 
 #sponsors
+  h3
+    //color:          #ccc
+    //font-size:      small
+    //text-align:     right
+    //text-transform: uppercase
+    //border-bottom:  1px dotted #ccc
+    margin-top: 10px
+
   ul
     +inline-block-list-container
     > li
