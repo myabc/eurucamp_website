@@ -2,15 +2,15 @@
   %h2 Location
   .span-6.prepend-1
     %h3 betahaus berlin
-    %img{:src => 'http://maps.google.com/maps/api/staticmap?center=Prinzessinnenstra%C3%9Fe+19-20+10969+Berlin&zoom=16&size=400x400&sensor=false'}
+    #map_canvas{:style => "width: 400px; height: 400px;"} 
   .span-5.last
-    %h3 http://betahaus.de/
+    %h3 <a href="http://betahaus.de/">http://betahaus.de/</a>
     %address
       %strong betahaus berlin
       Prinzessinnenstraße 19-20
       10969 Berlin
     %p
-      U-Bahn: Moritzplatz U8
+      %img(src='http://www.bvg.de/index.php/de/binaries/asset/icon/18099/icon') Moritzplatz U8
     %ul
       %li
         Mit U-Bahn:
@@ -19,3 +19,7 @@
         To / from EuRuKo venue:
         U8 from Moritzplatz to Alexanderplatz
         U5 from Alexanderplatz to Schillingstraße
+      %li
+        To / from Pizza (dinner) venue
+      %li.bvg
+        <iframe frameborder="0" style="width:300px;height:196px;border:0;" src="http://www.bvg.de/index.php/de/widgets/fahrinfo/1/300/1/Prinzessinnenstra%C3%9Fe%2019"></iframe>
