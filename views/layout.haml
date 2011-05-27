@@ -18,6 +18,8 @@
       try{Typekit.load();}catch(e){}
     = javascript_include_tag '/js/libs/modernizr-1.7.min.js'
     = javascript_include_tag 'http://widgets.twimg.com/j/2/widget.js'
+    = javascript_include_tag 'http://maps.google.com/maps/api/js?sensor=false'
+    
   %body
     %header
       #nav
@@ -52,3 +54,82 @@
       (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
       g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
       s.parentNode.insertBefore(g,s)}(document,'script'));
+      
+      var map;
+      var espi = new google.maps.LatLng(52.50262234,13.41224402);
+
+      var MY_MAPTYPE_ID = 'espi';
+
+      function initialize() {
+  
+        var stylez = [
+          {
+              featureType: 'road',
+              elementType: 'geometry',
+              stylers: [{'visibility': 'simplified'}]
+            }, {
+              featureType: 'road.arterial',
+              stylers: [
+               {hue: 149},
+               {saturation: -78},
+               {lightness: 0}
+              ]
+            }, {
+              featureType: 'road.highway',
+              stylers: [
+                {'visibility': 'simplified'}
+              ]
+            }, {
+              featureType: 'poi',
+              elementType: 'label',
+              stylers: [{'visibility': 'simplified'}]
+            }, {
+              featureType: 'landscape',
+              stylers: [
+                {hue: 163},
+                {saturation: -26},
+                {lightness: -1.1}
+              ]
+            }
+
+
+      ];
+
+      var mapOptions = {
+        zoom: 17,
+        center: espi,
+         mapTypeControl: false,
+        mapTypeControlOptions: {
+           mapTypeIds: [google.maps.MapTypeId.ROADMAP, MY_MAPTYPE_ID]
+        },
+        navigationControl: true,
+            navigationControlOptions: {
+              style: google.maps.NavigationControlStyle.SMALL
+            },
+        mapTypeId: MY_MAPTYPE_ID
+      };
+
+      map = new google.maps.Map(document.getElementById("map_canvas"),
+          mapOptions);
+    
+      var styledMapOptions = {
+        name: "espi"
+      };
+
+      var jayzMapType = new google.maps.StyledMapType(stylez, styledMapOptions);
+
+      map.mapTypes.set(MY_MAPTYPE_ID, jayzMapType);
+  
+  
+        var image = 'http://events.edenspiekermann.com/assets/images/berlin_p.png';
+            var myLatLng = new google.maps.LatLng(52.50262234,13.41224402);
+            var espiMarker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                icon: image
+            });
+        }
+  
+      $(document).ready(function() {
+        initialize();
+      });
