@@ -6,20 +6,25 @@
   .span-5.last
     %h3 <a href="http://betahaus.de/">http://betahaus.de/</a>
     %address
-      %strong betahaus berlin
-      Prinzessinnenstraße 19-20
+      %strong betahaus berlin<br>
+      Prinzessinnenstraße 19-20<br>
       10969 Berlin
     %p
-      %img(src='http://www.bvg.de/index.php/de/binaries/asset/icon/18099/icon') Moritzplatz U8
+      %span.line(style="background-color:#181953")U8
+      Moritzplatz
     %ul
-      %li
-        Mit U-Bahn:
-        http://www.bvg.de/
-      %li
-        To / from EuRuKo venue:
-        U8 from Moritzplatz to Alexanderplatz
-        U5 from Alexanderplatz to Schillingstraße
-      %li
-        To / from Pizza (dinner) venue
       %li.bvg
         <iframe frameborder="0" style="width:300px;height:196px;border:0;" src="http://www.bvg.de/index.php/de/widgets/fahrinfo/1/300/1/Prinzessinnenstra%C3%9Fe%2019"></iframe>
+      %li
+        %h6
+          To / from EuRuKo venue:<br>
+        %span.line(style="background-color:#181953")U8 
+        from Moritzplatz to Alexanderplatz<br>
+        %span.line(style="background-color:#5B1F10")U5
+        from Alexanderplatz to Schillingstraße
+      %li
+        %h6
+          To / from Pizzeria Masaniello, Hasenheide 20, 10967 Berlin
+        %span.line(style="background-color:#181953")U8 
+        from Moritzplatz to Hermannplatz<br>
+
